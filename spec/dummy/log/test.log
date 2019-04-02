@@ -20067,3 +20067,1369 @@ Processing by Api::PostsController#index as JSON
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 526], ["LIMIT", 1]]
   [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 526]]
 Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "youlanda@zulauf.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "youlanda@zulauf.io"], ["created_at", "2019-04-02 17:54:26.148782"], ["updated_at", "2019-04-02 17:54:26.148782"], ["encrypted_password", "$2a$04$ClIIFLqHTmau0Cqpfvw4Luu4eY6AowBMg0r7DjiRsd8jflLjwsnzq"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:26.153270"], ["token_expires_at", "2019-04-03 17:54:26.152468"], ["id", 527]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:26.164720"], ["updated_at", "2019-04-02 17:54:26.164720"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#update as JSON
+  Parameters: {"post"=>{"title"=>"Updated"}, "id"=>"4182"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4182], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Updated"], ["updated_at", "2019-04-02 17:54:26.175968"], ["id", 4182]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 14ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "marcelino@gutkowski.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "marcelino@gutkowski.info"], ["created_at", "2019-04-02 17:54:26.192075"], ["updated_at", "2019-04-02 17:54:26.192075"], ["encrypted_password", "$2a$04$KRSW2V2K19s9Ur3fr4vLHeIKb6U0R/gXiUdT3w.X1dzYxXQ9VQu2G"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:26.194917"], ["token_expires_at", "2019-04-03 17:54:26.194379"], ["id", 528]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:26.207064"], ["updated_at", "2019-04-02 17:54:26.207064"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#update as JSON
+  Parameters: {"post"=>{"title"=>"Updated"}, "id"=>"4183"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4183], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Updated"], ["updated_at", "2019-04-02 17:54:26.211313"], ["id", 4183]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "deedralebsack@willms.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "deedralebsack@willms.info"], ["created_at", "2019-04-02 17:54:26.219314"], ["updated_at", "2019-04-02 17:54:26.219314"], ["encrypted_password", "$2a$04$4RTuDP7uc9xAR8dEgkc9J.BfS5mnRj8FuTFzorgLhPRC7E0RoXajK"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:26.222374"], ["token_expires_at", "2019-04-03 17:54:26.221718"], ["id", 529]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:26.226494"], ["updated_at", "2019-04-02 17:54:26.226494"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#update as JSON
+  Parameters: {"post"=>{"title"=>"Updated"}, "id"=>"4184"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4184], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Updated"], ["updated_at", "2019-04-02 17:54:26.230866"], ["id", 4184]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.6ms)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:26.236366"], ["updated_at", "2019-04-02 17:54:26.236366"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4185"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4185], ["LIMIT", 1]]
+  Couldn't find template for digesting: api/posts/show
+Completed 200 OK in 16ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:26.257128"], ["updated_at", "2019-04-02 17:54:26.257128"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4186"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4186], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4186"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4186], ["LIMIT", 1]]
+Completed 304 Not Modified in 1ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:26.271793"], ["updated_at", "2019-04-02 17:54:26.271793"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4187"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4187], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4187"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4187], ["LIMIT", 1]]
+Completed 304 Not Modified in 1ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Update (0.3ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Updated title"], ["updated_at", "2019-04-02 17:54:26.280595"], ["id", 4187]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4187"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4187], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:26.791973"], ["updated_at", "2019-04-02 17:54:26.791973"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4188"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4188], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+Processing by Api::PostsController#show as JSON
+  Parameters: {"cache"=>"false", "id"=>"4188"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4188], ["LIMIT", 1]]
+Completed 304 Not Modified in 1ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "shavonne@parker.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "shavonne@parker.io"], ["created_at", "2019-04-02 17:54:26.803683"], ["updated_at", "2019-04-02 17:54:26.803683"], ["encrypted_password", "$2a$04$FrgtQqNL17TmKhqe/6WfXeTnqe2jnSgOOpwb4KI5Xn/xX5GhbV2ty"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:26.806339"], ["token_expires_at", "2019-04-03 17:54:26.805746"], ["id", 530]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 530], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.825869"], ["updated_at", "2019-04-02 17:54:26.825869"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 530], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.828498"], ["updated_at", "2019-04-02 17:54:26.828498"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 530], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.831312"], ["updated_at", "2019-04-02 17:54:26.831312"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 530], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.833865"], ["updated_at", "2019-04-02 17:54:26.833865"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 530], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.835817"], ["updated_at", "2019-04-02 17:54:26.835817"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 530], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.837855"], ["updated_at", "2019-04-02 17:54:26.837855"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 530], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.839686"], ["updated_at", "2019-04-02 17:54:26.839686"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 530], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.841665"], ["updated_at", "2019-04-02 17:54:26.841665"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 530], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.843624"], ["updated_at", "2019-04-02 17:54:26.843624"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 530], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.845737"], ["updated_at", "2019-04-02 17:54:26.845737"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "posts"."id" FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 530]]
+Processing by Api::PostsController#index as JSON
+  Parameters: {"ids"=>"4193,4198,4191,4196,4197", "user_id"=>"530"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 530], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? AND "posts"."id" IN (?, ?, ?, ?, ?)[0m  [["user_id", 530], ["id", 4193], ["id", 4198], ["id", 4191], ["id", 4196], ["id", 4197]]
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "marya@marksboyer.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "marya@marksboyer.info"], ["created_at", "2019-04-02 17:54:26.862624"], ["updated_at", "2019-04-02 17:54:26.862624"], ["encrypted_password", "$2a$04$VSrn9dTQbwbFakaOqVkE1e.WYx2lsxhk/J1MM3P2aHNQYSvJbTdUS"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:26.865270"], ["token_expires_at", "2019-04-03 17:54:26.864664"], ["id", 531]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:26.867333"], ["updated_at", "2019-04-02 17:54:26.867333"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4199"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4199], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "shanti@bernierthiel.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "shanti@bernierthiel.io"], ["created_at", "2019-04-02 17:54:26.874689"], ["updated_at", "2019-04-02 17:54:26.874689"], ["encrypted_password", "$2a$04$v1l6Ss9c10uxFuCC1L9FReoxDDKvqDs64SoxlkHejXEv4TOTjsmHa"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:26.877283"], ["token_expires_at", "2019-04-03 17:54:26.876653"], ["id", 532]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.880053"], ["updated_at", "2019-04-02 17:54:26.880053"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.882809"], ["updated_at", "2019-04-02 17:54:26.882809"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.885001"], ["updated_at", "2019-04-02 17:54:26.885001"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.887091"], ["updated_at", "2019-04-02 17:54:26.887091"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.889242"], ["updated_at", "2019-04-02 17:54:26.889242"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.892221"], ["updated_at", "2019-04-02 17:54:26.892221"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.894843"], ["updated_at", "2019-04-02 17:54:26.894843"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.897424"], ["updated_at", "2019-04-02 17:54:26.897424"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.900498"], ["updated_at", "2019-04-02 17:54:26.900498"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.902702"], ["updated_at", "2019-04-02 17:54:26.902702"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.905076"], ["updated_at", "2019-04-02 17:54:26.905076"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.907349"], ["updated_at", "2019-04-02 17:54:26.907349"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.909390"], ["updated_at", "2019-04-02 17:54:26.909390"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.911434"], ["updated_at", "2019-04-02 17:54:26.911434"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.913460"], ["updated_at", "2019-04-02 17:54:26.913460"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.915359"], ["updated_at", "2019-04-02 17:54:26.915359"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.917435"], ["updated_at", "2019-04-02 17:54:26.917435"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.919554"], ["updated_at", "2019-04-02 17:54:26.919554"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.921628"], ["updated_at", "2019-04-02 17:54:26.921628"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 532], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.923742"], ["updated_at", "2019-04-02 17:54:26.923742"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"user_id"=>"532"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 532], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 532]]
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 532]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "santo@heaneyabshire.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "santo@heaneyabshire.com"], ["created_at", "2019-04-02 17:54:26.937310"], ["updated_at", "2019-04-02 17:54:26.937310"], ["encrypted_password", "$2a$04$PxsDM/P0AuTqnEjrSGDWre2l8ck7D2GN2FN93kRYTiayJnKCZF2OK"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:26.939697"], ["token_expires_at", "2019-04-03 17:54:26.939195"], ["id", 533]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.942173"], ["updated_at", "2019-04-02 17:54:26.942173"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.944793"], ["updated_at", "2019-04-02 17:54:26.944793"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.947323"], ["updated_at", "2019-04-02 17:54:26.947323"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.951020"], ["updated_at", "2019-04-02 17:54:26.951020"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.953485"], ["updated_at", "2019-04-02 17:54:26.953485"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.955646"], ["updated_at", "2019-04-02 17:54:26.955646"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.959760"], ["updated_at", "2019-04-02 17:54:26.959760"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.962428"], ["updated_at", "2019-04-02 17:54:26.962428"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.964825"], ["updated_at", "2019-04-02 17:54:26.964825"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.967577"], ["updated_at", "2019-04-02 17:54:26.967577"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.969470"], ["updated_at", "2019-04-02 17:54:26.969470"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.971469"], ["updated_at", "2019-04-02 17:54:26.971469"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.974399"], ["updated_at", "2019-04-02 17:54:26.974399"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.976417"], ["updated_at", "2019-04-02 17:54:26.976417"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.978296"], ["updated_at", "2019-04-02 17:54:26.978296"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.980210"], ["updated_at", "2019-04-02 17:54:26.980210"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.982221"], ["updated_at", "2019-04-02 17:54:26.982221"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.984248"], ["updated_at", "2019-04-02 17:54:26.984248"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.986416"], ["updated_at", "2019-04-02 17:54:26.986416"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 533], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:26.988310"], ["updated_at", "2019-04-02 17:54:26.988310"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"limit"=>"5", "page"=>"2", "user_id"=>"533"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 533], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 533]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 533], ["LIMIT", 5], ["OFFSET", 5]]
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT  "posts"."id" FROM "posts" WHERE "posts"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 533], ["LIMIT", 5], ["OFFSET", 5]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "neidaschinner@kling.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "neidaschinner@kling.name"], ["created_at", "2019-04-02 17:54:27.002233"], ["updated_at", "2019-04-02 17:54:27.002233"], ["encrypted_password", "$2a$04$ojNgm9tPpgCBROU9zumYSOT3pO8PocRzTsqjSh8/HboV6qhtRPvj."]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:27.005234"], ["token_expires_at", "2019-04-03 17:54:27.004640"], ["id", 534]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.008141"], ["updated_at", "2019-04-02 17:54:27.008141"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.010558"], ["updated_at", "2019-04-02 17:54:27.010558"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.013075"], ["updated_at", "2019-04-02 17:54:27.013075"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.016039"], ["updated_at", "2019-04-02 17:54:27.016039"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.018634"], ["updated_at", "2019-04-02 17:54:27.018634"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.020817"], ["updated_at", "2019-04-02 17:54:27.020817"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.023460"], ["updated_at", "2019-04-02 17:54:27.023460"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.027352"], ["updated_at", "2019-04-02 17:54:27.027352"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.029769"], ["updated_at", "2019-04-02 17:54:27.029769"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.032218"], ["updated_at", "2019-04-02 17:54:27.032218"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.034885"], ["updated_at", "2019-04-02 17:54:27.034885"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.037245"], ["updated_at", "2019-04-02 17:54:27.037245"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.039621"], ["updated_at", "2019-04-02 17:54:27.039621"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.041595"], ["updated_at", "2019-04-02 17:54:27.041595"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.043494"], ["updated_at", "2019-04-02 17:54:27.043494"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.045431"], ["updated_at", "2019-04-02 17:54:27.045431"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.047479"], ["updated_at", "2019-04-02 17:54:27.047479"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.049813"], ["updated_at", "2019-04-02 17:54:27.049813"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.051832"], ["updated_at", "2019-04-02 17:54:27.051832"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 534], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.054096"], ["updated_at", "2019-04-02 17:54:27.054096"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"page"=>"1", "user_id"=>"534"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 534], ["LIMIT", 1]]
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sherriebalistreri@ortizmurphy.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "sherriebalistreri@ortizmurphy.com"], ["created_at", "2019-04-02 17:54:27.063222"], ["updated_at", "2019-04-02 17:54:27.063222"], ["encrypted_password", "$2a$04$ibOi6E38sLKHbf4h8/e/NuTajooC2p8EDb3esnP0vSnpzoYhCoMya"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:27.066108"], ["token_expires_at", "2019-04-03 17:54:27.065372"], ["id", 535]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.069277"], ["updated_at", "2019-04-02 17:54:27.069277"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.071913"], ["updated_at", "2019-04-02 17:54:27.071913"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.074726"], ["updated_at", "2019-04-02 17:54:27.074726"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.077255"], ["updated_at", "2019-04-02 17:54:27.077255"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.079876"], ["updated_at", "2019-04-02 17:54:27.079876"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.083236"], ["updated_at", "2019-04-02 17:54:27.083236"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.086195"], ["updated_at", "2019-04-02 17:54:27.086195"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.088748"], ["updated_at", "2019-04-02 17:54:27.088748"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.092611"], ["updated_at", "2019-04-02 17:54:27.092611"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.095481"], ["updated_at", "2019-04-02 17:54:27.095481"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.098046"], ["updated_at", "2019-04-02 17:54:27.098046"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.100668"], ["updated_at", "2019-04-02 17:54:27.100668"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.102545"], ["updated_at", "2019-04-02 17:54:27.102545"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.104369"], ["updated_at", "2019-04-02 17:54:27.104369"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.106359"], ["updated_at", "2019-04-02 17:54:27.106359"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.108295"], ["updated_at", "2019-04-02 17:54:27.108295"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.110207"], ["updated_at", "2019-04-02 17:54:27.110207"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.112123"], ["updated_at", "2019-04-02 17:54:27.112123"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.114249"], ["updated_at", "2019-04-02 17:54:27.114249"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 535], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.116713"], ["updated_at", "2019-04-02 17:54:27.116713"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"limit"=>"20", "user_id"=>"535"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 535], ["LIMIT", 1]]
+Completed 400 Bad Request in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "trudie@breitenberg.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "trudie@breitenberg.net"], ["created_at", "2019-04-02 17:54:27.126967"], ["updated_at", "2019-04-02 17:54:27.126967"], ["encrypted_password", "$2a$04$5SVOXnbAQfuhn2x8CMmxLOvh734duZAnZqAa5VKEeWHoS0gfO6ViK"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:27.130070"], ["token_expires_at", "2019-04-03 17:54:27.129330"], ["id", 536]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.132998"], ["updated_at", "2019-04-02 17:54:27.132998"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.135423"], ["updated_at", "2019-04-02 17:54:27.135423"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.137589"], ["updated_at", "2019-04-02 17:54:27.137589"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.139998"], ["updated_at", "2019-04-02 17:54:27.139998"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.143589"], ["updated_at", "2019-04-02 17:54:27.143589"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.146208"], ["updated_at", "2019-04-02 17:54:27.146208"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.148811"], ["updated_at", "2019-04-02 17:54:27.148811"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.151961"], ["updated_at", "2019-04-02 17:54:27.151961"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.154041"], ["updated_at", "2019-04-02 17:54:27.154041"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.156035"], ["updated_at", "2019-04-02 17:54:27.156035"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.158264"], ["updated_at", "2019-04-02 17:54:27.158264"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.160860"], ["updated_at", "2019-04-02 17:54:27.160860"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.163153"], ["updated_at", "2019-04-02 17:54:27.163153"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.165128"], ["updated_at", "2019-04-02 17:54:27.165128"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.167053"], ["updated_at", "2019-04-02 17:54:27.167053"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.169021"], ["updated_at", "2019-04-02 17:54:27.169021"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.171105"], ["updated_at", "2019-04-02 17:54:27.171105"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.173064"], ["updated_at", "2019-04-02 17:54:27.173064"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.175172"], ["updated_at", "2019-04-02 17:54:27.175172"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 536], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.177254"], ["updated_at", "2019-04-02 17:54:27.177254"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"limit"=>"5", "page"=>"1", "user_id"=>"536"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 536], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 536]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 536], ["LIMIT", 5], ["OFFSET", 0]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lidia@schusterokuneva.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "lidia@schusterokuneva.io"], ["created_at", "2019-04-02 17:54:27.188726"], ["updated_at", "2019-04-02 17:54:27.188726"], ["encrypted_password", "$2a$04$vbv/XDlpjnMt1y4hAGkIquTp4lAddsIlfoR4NbiFxW84NjCZIQ6ci"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:27.191325"], ["token_expires_at", "2019-04-03 17:54:27.190718"], ["id", 537]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.193968"], ["updated_at", "2019-04-02 17:54:27.193968"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.196433"], ["updated_at", "2019-04-02 17:54:27.196433"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.199412"], ["updated_at", "2019-04-02 17:54:27.199412"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.202316"], ["updated_at", "2019-04-02 17:54:27.202316"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.204960"], ["updated_at", "2019-04-02 17:54:27.204960"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.208133"], ["updated_at", "2019-04-02 17:54:27.208133"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.211385"], ["updated_at", "2019-04-02 17:54:27.211385"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.213882"], ["updated_at", "2019-04-02 17:54:27.213882"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.216781"], ["updated_at", "2019-04-02 17:54:27.216781"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.219250"], ["updated_at", "2019-04-02 17:54:27.219250"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.221108"], ["updated_at", "2019-04-02 17:54:27.221108"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.223004"], ["updated_at", "2019-04-02 17:54:27.223004"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.224970"], ["updated_at", "2019-04-02 17:54:27.224970"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.226882"], ["updated_at", "2019-04-02 17:54:27.226882"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.228867"], ["updated_at", "2019-04-02 17:54:27.228867"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.230752"], ["updated_at", "2019-04-02 17:54:27.230752"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.232761"], ["updated_at", "2019-04-02 17:54:27.232761"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.234859"], ["updated_at", "2019-04-02 17:54:27.234859"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.237027"], ["updated_at", "2019-04-02 17:54:27.237027"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 537], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.238960"], ["updated_at", "2019-04-02 17:54:27.238960"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"limit"=>"5", "page"=>"1", "user_id"=>"537"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 537], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 537]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 537], ["LIMIT", 5], ["OFFSET", 0]]
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gwendolyn@ryan.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "gwendolyn@ryan.org"], ["created_at", "2019-04-02 17:54:27.249048"], ["updated_at", "2019-04-02 17:54:27.249048"], ["encrypted_password", "$2a$04$ltG/w/8Fsfq7/EPhdUJJqePohw5FqF/XWodJL55YoPGSiAkeOUQBC"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:27.251607"], ["token_expires_at", "2019-04-03 17:54:27.251068"], ["id", 538]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 538], ["title", "Hey"], ["body", "This is a post"], ["created_at", "2019-04-02 17:54:27.253807"], ["updated_at", "2019-04-02 17:54:27.253807"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 538], ["title", "AAA"], ["body", "Aaaa aaa aa a"], ["created_at", "2019-04-02 17:54:27.255835"], ["updated_at", "2019-04-02 17:54:27.255835"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 538], ["title", "BBB"], ["body", "Bbbb bbb bb b"], ["created_at", "2019-04-02 17:54:27.257793"], ["updated_at", "2019-04-02 17:54:27.257793"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 538], ["title", "CCC"], ["body", "Cccc ccc cc c"], ["created_at", "2019-04-02 17:54:27.259841"], ["updated_at", "2019-04-02 17:54:27.259841"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"search"=>{"query"=>"AA"}, "user_id"=>"538"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 538], ["LIMIT", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? AND (title LIKE '%AA%' OR body LIKE '%AA%')[0m  [["user_id", 538]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "cruz@harveywest.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "cruz@harveywest.io"], ["created_at", "2019-04-02 17:54:27.270270"], ["updated_at", "2019-04-02 17:54:27.270270"], ["encrypted_password", "$2a$04$OXkGQOqKe6I8r2.ZXbu24OFYdBDgU88AQ3PJ.SxXF6xru6dEzlNSi"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:27.273400"], ["token_expires_at", "2019-04-03 17:54:27.272487"], ["id", 539]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 539], ["title", "Hey"], ["body", "This is a post"], ["created_at", "2019-04-02 17:54:27.277697"], ["updated_at", "2019-04-02 17:54:27.277697"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 539], ["title", "AAA"], ["body", "Aaaa aaa aa a"], ["created_at", "2019-04-02 17:54:27.280367"], ["updated_at", "2019-04-02 17:54:27.280367"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 539], ["title", "BBB"], ["body", "Bbbb bbb bb b"], ["created_at", "2019-04-02 17:54:27.283897"], ["updated_at", "2019-04-02 17:54:27.283897"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 539], ["title", "CCC"], ["body", "Cccc ccc cc c"], ["created_at", "2019-04-02 17:54:27.287139"], ["updated_at", "2019-04-02 17:54:27.287139"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"search"=>{"query"=>{"body"=>"Aaa"}}, "user_id"=>"539"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 539], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? AND (body LIKE '%Aaa%')[0m  [["user_id", 539]]
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "cory@runolfon.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "cory@runolfon.co"], ["created_at", "2019-04-02 17:54:27.314544"], ["updated_at", "2019-04-02 17:54:27.314544"], ["encrypted_password", "$2a$04$tmI55Gzw78mE/rXc/scQAO933XHOhQO72rxM7N56gAWW6gz11xQku"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:27.317280"], ["token_expires_at", "2019-04-03 17:54:27.316640"], ["id", 540]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 540], ["title", "Hey"], ["body", "This is a post"], ["created_at", "2019-04-02 17:54:27.320462"], ["updated_at", "2019-04-02 17:54:27.320462"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 540], ["title", "AAA"], ["body", "Aaaa aaa aa a"], ["created_at", "2019-04-02 17:54:27.323276"], ["updated_at", "2019-04-02 17:54:27.323276"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 540], ["title", "BBB"], ["body", "Bbbb bbb bb b"], ["created_at", "2019-04-02 17:54:27.325969"], ["updated_at", "2019-04-02 17:54:27.325969"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 540], ["title", "CCC"], ["body", "Cccc ccc cc c"], ["created_at", "2019-04-02 17:54:27.328755"], ["updated_at", "2019-04-02 17:54:27.328755"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"search"=>{"_operator"=>"or", "query"=>{"body"=>"Aaa", "title"=>"BBB"}}, "user_id"=>"540"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 540], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? AND (title LIKE '%BBB%' OR body LIKE '%Aaa%')[0m  [["user_id", 540]]
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "carlahirthe@powlowski.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "carlahirthe@powlowski.org"], ["created_at", "2019-04-02 17:54:27.343959"], ["updated_at", "2019-04-02 17:54:27.343959"], ["encrypted_password", "$2a$04$emyeFumJ0OdJpN61.99MR.aRXKWrDfQ9V/a6bFRSMuBT9McvFwXlq"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:27.347639"], ["token_expires_at", "2019-04-03 17:54:27.346904"], ["id", 541]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:27.350153"], ["updated_at", "2019-04-02 17:54:27.350153"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#update as JSON
+  Parameters: {"post"=>{"title"=>"Updated"}, "id"=>"4332"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4332], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Updated"], ["updated_at", "2019-04-02 17:54:27.354824"], ["id", 4332]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.6ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lelandlubowitz@rempel.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "lelandlubowitz@rempel.io"], ["created_at", "2019-04-02 17:54:27.366381"], ["updated_at", "2019-04-02 17:54:27.366381"], ["encrypted_password", "$2a$04$Lvo56c6FPT1rRccgmp852ujADsy2V0PUmPxKpMEHnCz.Dk8OBp9l6"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:27.371255"], ["token_expires_at", "2019-04-03 17:54:27.370467"], ["id", 542]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:27.373523"], ["updated_at", "2019-04-02 17:54:27.373523"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#update as JSON
+  Parameters: {"post"=>{"title"=>"Updated"}, "id"=>"4333"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4333], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Update (0.2ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Updated"], ["updated_at", "2019-04-02 17:54:27.376941"], ["id", 4333]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "catherina@streich.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "catherina@streich.org"], ["created_at", "2019-04-02 17:54:27.383741"], ["updated_at", "2019-04-02 17:54:27.383741"], ["encrypted_password", "$2a$04$er8e36lXA.vQp5nrrfms6OE13VXr7L3kElfIrBPDCXP2jhs2SyIvi"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:27.386831"], ["token_expires_at", "2019-04-03 17:54:27.385875"], ["id", 543]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:27.389844"], ["updated_at", "2019-04-02 17:54:27.389844"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#update as JSON
+  Parameters: {"post"=>{"title"=>"Updated"}, "id"=>"4334"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4334], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Updated"], ["updated_at", "2019-04-02 17:54:27.396406"], ["id", 4334]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.6ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:27.403522"], ["updated_at", "2019-04-02 17:54:27.403522"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4335"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4335], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:27.412226"], ["updated_at", "2019-04-02 17:54:27.412226"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4336"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4336], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4336"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4336], ["LIMIT", 1]]
+Completed 304 Not Modified in 2ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:27.427829"], ["updated_at", "2019-04-02 17:54:27.427829"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4337"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4337], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4337"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4337], ["LIMIT", 1]]
+Completed 304 Not Modified in 1ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Update (0.4ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Updated title"], ["updated_at", "2019-04-02 17:54:27.438368"], ["id", 4337]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4337"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4337], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:27.947735"], ["updated_at", "2019-04-02 17:54:27.947735"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4338"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4338], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+Processing by Api::PostsController#show as JSON
+  Parameters: {"cache"=>"false", "id"=>"4338"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4338], ["LIMIT", 1]]
+Completed 304 Not Modified in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gillian@bergstrom.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "gillian@bergstrom.info"], ["created_at", "2019-04-02 17:54:27.957869"], ["updated_at", "2019-04-02 17:54:27.957869"], ["encrypted_password", "$2a$04$JuJD7htadL38N27jHgS77ufu0qmzn2IbXXOOW46.CWd3aEQztLQPK"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:27.960490"], ["token_expires_at", "2019-04-03 17:54:27.959872"], ["id", 544]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 544], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.962946"], ["updated_at", "2019-04-02 17:54:27.962946"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 544], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.965074"], ["updated_at", "2019-04-02 17:54:27.965074"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 544], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.967301"], ["updated_at", "2019-04-02 17:54:27.967301"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 544], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.969606"], ["updated_at", "2019-04-02 17:54:27.969606"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 544], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.972321"], ["updated_at", "2019-04-02 17:54:27.972321"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 544], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.974624"], ["updated_at", "2019-04-02 17:54:27.974624"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 544], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.976853"], ["updated_at", "2019-04-02 17:54:27.976853"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 544], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.978818"], ["updated_at", "2019-04-02 17:54:27.978818"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 544], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.980720"], ["updated_at", "2019-04-02 17:54:27.980720"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 544], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:27.982848"], ["updated_at", "2019-04-02 17:54:27.982848"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "posts"."id" FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 544]]
+Processing by Api::PostsController#index as JSON
+  Parameters: {"ids"=>"4342,4345,4348,4344,4341", "user_id"=>"544"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 544], ["LIMIT", 1]]
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? AND "posts"."id" IN (?, ?, ?, ?, ?)[0m  [["user_id", 544], ["id", 4342], ["id", 4345], ["id", 4348], ["id", 4344], ["id", 4341]]
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hollis@boehmbarton.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "hollis@boehmbarton.biz"], ["created_at", "2019-04-02 17:54:27.996695"], ["updated_at", "2019-04-02 17:54:27.996695"], ["encrypted_password", "$2a$04$c1iBcqSMYX08YpVno630je60Jnuy9rSUdIottW5fzVI/i11VtxFT."]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:27.999253"], ["token_expires_at", "2019-04-03 17:54:27.998651"], ["id", 545]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["body", "body"], ["created_at", "2019-04-02 17:54:28.001455"], ["updated_at", "2019-04-02 17:54:28.001455"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#show as JSON
+  Parameters: {"id"=>"4349"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 4349], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lieselottekihn@leuschke.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "lieselottekihn@leuschke.co"], ["created_at", "2019-04-02 17:54:28.011185"], ["updated_at", "2019-04-02 17:54:28.011185"], ["encrypted_password", "$2a$04$EbJqiJAgE7QCMYe9VDhJQ.fOkBOv.x0PXCcduVEdo6G.VDw2CGuVm"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:28.013522"], ["token_expires_at", "2019-04-03 17:54:28.012991"], ["id", 546]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.016051"], ["updated_at", "2019-04-02 17:54:28.016051"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.018663"], ["updated_at", "2019-04-02 17:54:28.018663"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.023308"], ["updated_at", "2019-04-02 17:54:28.023308"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.026598"], ["updated_at", "2019-04-02 17:54:28.026598"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.030683"], ["updated_at", "2019-04-02 17:54:28.030683"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.033727"], ["updated_at", "2019-04-02 17:54:28.033727"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.037787"], ["updated_at", "2019-04-02 17:54:28.037787"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.041903"], ["updated_at", "2019-04-02 17:54:28.041903"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.045557"], ["updated_at", "2019-04-02 17:54:28.045557"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.049209"], ["updated_at", "2019-04-02 17:54:28.049209"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.053031"], ["updated_at", "2019-04-02 17:54:28.053031"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.055073"], ["updated_at", "2019-04-02 17:54:28.055073"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.057229"], ["updated_at", "2019-04-02 17:54:28.057229"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.059284"], ["updated_at", "2019-04-02 17:54:28.059284"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.061277"], ["updated_at", "2019-04-02 17:54:28.061277"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.063185"], ["updated_at", "2019-04-02 17:54:28.063185"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.065130"], ["updated_at", "2019-04-02 17:54:28.065130"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.067485"], ["updated_at", "2019-04-02 17:54:28.067485"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.069647"], ["updated_at", "2019-04-02 17:54:28.069647"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 546], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.071851"], ["updated_at", "2019-04-02 17:54:28.071851"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"user_id"=>"546"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 546], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 546]]
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 546]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "nicky@thieltreutel.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "nicky@thieltreutel.io"], ["created_at", "2019-04-02 17:54:28.083960"], ["updated_at", "2019-04-02 17:54:28.083960"], ["encrypted_password", "$2a$04$Pz.Y377mjPe/gHy.rvigC.hlng.KntQKDka2UXtp0phiLorREHit."]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:28.086322"], ["token_expires_at", "2019-04-03 17:54:28.085783"], ["id", 547]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.088490"], ["updated_at", "2019-04-02 17:54:28.088490"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.090668"], ["updated_at", "2019-04-02 17:54:28.090668"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.092788"], ["updated_at", "2019-04-02 17:54:28.092788"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.094849"], ["updated_at", "2019-04-02 17:54:28.094849"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.096812"], ["updated_at", "2019-04-02 17:54:28.096812"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.099113"], ["updated_at", "2019-04-02 17:54:28.099113"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.101360"], ["updated_at", "2019-04-02 17:54:28.101360"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.104288"], ["updated_at", "2019-04-02 17:54:28.104288"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.106658"], ["updated_at", "2019-04-02 17:54:28.106658"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.108698"], ["updated_at", "2019-04-02 17:54:28.108698"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.110739"], ["updated_at", "2019-04-02 17:54:28.110739"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.112850"], ["updated_at", "2019-04-02 17:54:28.112850"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.114888"], ["updated_at", "2019-04-02 17:54:28.114888"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.116831"], ["updated_at", "2019-04-02 17:54:28.116831"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.119129"], ["updated_at", "2019-04-02 17:54:28.119129"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.122835"], ["updated_at", "2019-04-02 17:54:28.122835"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.125430"], ["updated_at", "2019-04-02 17:54:28.125430"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.128580"], ["updated_at", "2019-04-02 17:54:28.128580"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.130907"], ["updated_at", "2019-04-02 17:54:28.130907"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 547], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.132955"], ["updated_at", "2019-04-02 17:54:28.132955"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"limit"=>"5", "page"=>"2", "user_id"=>"547"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 547], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 547]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 547], ["LIMIT", 5], ["OFFSET", 5]]
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT  "posts"."id" FROM "posts" WHERE "posts"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 547], ["LIMIT", 5], ["OFFSET", 5]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "melina@senger.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "melina@senger.name"], ["created_at", "2019-04-02 17:54:28.143512"], ["updated_at", "2019-04-02 17:54:28.143512"], ["encrypted_password", "$2a$04$x5MGp5cgYkxPSdLIcdOaIOqgC1NJizNKGlJIX68nN7HELpy8nlOXi"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:28.146106"], ["token_expires_at", "2019-04-03 17:54:28.145501"], ["id", 548]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.148665"], ["updated_at", "2019-04-02 17:54:28.148665"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.151143"], ["updated_at", "2019-04-02 17:54:28.151143"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.153769"], ["updated_at", "2019-04-02 17:54:28.153769"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.156351"], ["updated_at", "2019-04-02 17:54:28.156351"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.158264"], ["updated_at", "2019-04-02 17:54:28.158264"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.160303"], ["updated_at", "2019-04-02 17:54:28.160303"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.162605"], ["updated_at", "2019-04-02 17:54:28.162605"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.164639"], ["updated_at", "2019-04-02 17:54:28.164639"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.166604"], ["updated_at", "2019-04-02 17:54:28.166604"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.168636"], ["updated_at", "2019-04-02 17:54:28.168636"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.171939"], ["updated_at", "2019-04-02 17:54:28.171939"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.174945"], ["updated_at", "2019-04-02 17:54:28.174945"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.177610"], ["updated_at", "2019-04-02 17:54:28.177610"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.180260"], ["updated_at", "2019-04-02 17:54:28.180260"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.182305"], ["updated_at", "2019-04-02 17:54:28.182305"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.184211"], ["updated_at", "2019-04-02 17:54:28.184211"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.186144"], ["updated_at", "2019-04-02 17:54:28.186144"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.188101"], ["updated_at", "2019-04-02 17:54:28.188101"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.190416"], ["updated_at", "2019-04-02 17:54:28.190416"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 548], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.192612"], ["updated_at", "2019-04-02 17:54:28.192612"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"page"=>"1", "user_id"=>"548"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 548], ["LIMIT", 1]]
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sena@croninprice.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "sena@croninprice.net"], ["created_at", "2019-04-02 17:54:28.201778"], ["updated_at", "2019-04-02 17:54:28.201778"], ["encrypted_password", "$2a$04$nWaRJJh3LqnjP7B1AePsBeGnUG4TZ5TA9PG2J0SkHvcG4VUt1kQK6"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:28.204692"], ["token_expires_at", "2019-04-03 17:54:28.203759"], ["id", 549]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.207744"], ["updated_at", "2019-04-02 17:54:28.207744"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.210101"], ["updated_at", "2019-04-02 17:54:28.210101"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.212955"], ["updated_at", "2019-04-02 17:54:28.212955"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.215167"], ["updated_at", "2019-04-02 17:54:28.215167"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.217153"], ["updated_at", "2019-04-02 17:54:28.217153"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.220881"], ["updated_at", "2019-04-02 17:54:28.220881"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.223611"], ["updated_at", "2019-04-02 17:54:28.223611"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.225959"], ["updated_at", "2019-04-02 17:54:28.225959"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.229080"], ["updated_at", "2019-04-02 17:54:28.229080"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.231011"], ["updated_at", "2019-04-02 17:54:28.231011"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.232958"], ["updated_at", "2019-04-02 17:54:28.232958"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.234813"], ["updated_at", "2019-04-02 17:54:28.234813"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.236705"], ["updated_at", "2019-04-02 17:54:28.236705"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.238476"], ["updated_at", "2019-04-02 17:54:28.238476"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.240356"], ["updated_at", "2019-04-02 17:54:28.240356"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.242307"], ["updated_at", "2019-04-02 17:54:28.242307"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.244208"], ["updated_at", "2019-04-02 17:54:28.244208"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.246288"], ["updated_at", "2019-04-02 17:54:28.246288"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.248282"], ["updated_at", "2019-04-02 17:54:28.248282"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 549], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.250154"], ["updated_at", "2019-04-02 17:54:28.250154"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"limit"=>"20", "user_id"=>"549"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 549], ["LIMIT", 1]]
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "donnybergstrom@wolf.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "donnybergstrom@wolf.com"], ["created_at", "2019-04-02 17:54:28.257475"], ["updated_at", "2019-04-02 17:54:28.257475"], ["encrypted_password", "$2a$04$ZbddmuTnkzJUGVjT2ZNslu4DNpoCVXMyShlwgFjwvXKwsExLe2FwG"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:28.259935"], ["token_expires_at", "2019-04-03 17:54:28.259334"], ["id", 550]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.262379"], ["updated_at", "2019-04-02 17:54:28.262379"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.264457"], ["updated_at", "2019-04-02 17:54:28.264457"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.266426"], ["updated_at", "2019-04-02 17:54:28.266426"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.268814"], ["updated_at", "2019-04-02 17:54:28.268814"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.271744"], ["updated_at", "2019-04-02 17:54:28.271744"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.273906"], ["updated_at", "2019-04-02 17:54:28.273906"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.275986"], ["updated_at", "2019-04-02 17:54:28.275986"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.278140"], ["updated_at", "2019-04-02 17:54:28.278140"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.280238"], ["updated_at", "2019-04-02 17:54:28.280238"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.282262"], ["updated_at", "2019-04-02 17:54:28.282262"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.284156"], ["updated_at", "2019-04-02 17:54:28.284156"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.287789"], ["updated_at", "2019-04-02 17:54:28.287789"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.290373"], ["updated_at", "2019-04-02 17:54:28.290373"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.292601"], ["updated_at", "2019-04-02 17:54:28.292601"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.295508"], ["updated_at", "2019-04-02 17:54:28.295508"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.297446"], ["updated_at", "2019-04-02 17:54:28.297446"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.299760"], ["updated_at", "2019-04-02 17:54:28.299760"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.301685"], ["updated_at", "2019-04-02 17:54:28.301685"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.303730"], ["updated_at", "2019-04-02 17:54:28.303730"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 550], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.306121"], ["updated_at", "2019-04-02 17:54:28.306121"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"limit"=>"5", "page"=>"1", "user_id"=>"550"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 550], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 550]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 550], ["LIMIT", 5], ["OFFSET", 0]]
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "martine@schaden.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "martine@schaden.biz"], ["created_at", "2019-04-02 17:54:28.316772"], ["updated_at", "2019-04-02 17:54:28.316772"], ["encrypted_password", "$2a$04$LNOHtJy4csjUw4JImduNWuCcgMLTEB9I5kCIDvrXB4AFbVeWWO/xu"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:28.319712"], ["token_expires_at", "2019-04-03 17:54:28.319086"], ["id", 551]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.323155"], ["updated_at", "2019-04-02 17:54:28.323155"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.325490"], ["updated_at", "2019-04-02 17:54:28.325490"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.327432"], ["updated_at", "2019-04-02 17:54:28.327432"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.329547"], ["updated_at", "2019-04-02 17:54:28.329547"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.331476"], ["updated_at", "2019-04-02 17:54:28.331476"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.333352"], ["updated_at", "2019-04-02 17:54:28.333352"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.336093"], ["updated_at", "2019-04-02 17:54:28.336093"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.339579"], ["updated_at", "2019-04-02 17:54:28.339579"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.342133"], ["updated_at", "2019-04-02 17:54:28.342133"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.344975"], ["updated_at", "2019-04-02 17:54:28.344975"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.347503"], ["updated_at", "2019-04-02 17:54:28.347503"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.350097"], ["updated_at", "2019-04-02 17:54:28.350097"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.352073"], ["updated_at", "2019-04-02 17:54:28.352073"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.354127"], ["updated_at", "2019-04-02 17:54:28.354127"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.356169"], ["updated_at", "2019-04-02 17:54:28.356169"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.358047"], ["updated_at", "2019-04-02 17:54:28.358047"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.359906"], ["updated_at", "2019-04-02 17:54:28.359906"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.362262"], ["updated_at", "2019-04-02 17:54:28.362262"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.364525"], ["updated_at", "2019-04-02 17:54:28.364525"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 551], ["title", "Title"], ["body", "Body"], ["created_at", "2019-04-02 17:54:28.366432"], ["updated_at", "2019-04-02 17:54:28.366432"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"limit"=>"5", "page"=>"1", "user_id"=>"551"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 551], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 551]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."user_id" = ? LIMIT ? OFFSET ?[0m  [["user_id", 551], ["LIMIT", 5], ["OFFSET", 0]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lavinarunolfsdottir@considine.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "lavinarunolfsdottir@considine.info"], ["created_at", "2019-04-02 17:54:28.376289"], ["updated_at", "2019-04-02 17:54:28.376289"], ["encrypted_password", "$2a$04$ePxsLEneEAPam4zaBZ96Y.4LJ/HasfQ.7UOWNCReTCne6zx21DDz2"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:28.379112"], ["token_expires_at", "2019-04-03 17:54:28.378366"], ["id", 552]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 552], ["title", "Hey"], ["body", "This is a post"], ["created_at", "2019-04-02 17:54:28.381602"], ["updated_at", "2019-04-02 17:54:28.381602"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 552], ["title", "AAA"], ["body", "Aaaa aaa aa a"], ["created_at", "2019-04-02 17:54:28.383991"], ["updated_at", "2019-04-02 17:54:28.383991"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 552], ["title", "BBB"], ["body", "Bbbb bbb bb b"], ["created_at", "2019-04-02 17:54:28.386418"], ["updated_at", "2019-04-02 17:54:28.386418"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 552], ["title", "CCC"], ["body", "Cccc ccc cc c"], ["created_at", "2019-04-02 17:54:28.389493"], ["updated_at", "2019-04-02 17:54:28.389493"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"search"=>{"query"=>"AA"}, "user_id"=>"552"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 552], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? AND (title LIKE '%AA%' OR body LIKE '%AA%')[0m  [["user_id", 552]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kirk@christiansen.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "kirk@christiansen.name"], ["created_at", "2019-04-02 17:54:28.398757"], ["updated_at", "2019-04-02 17:54:28.398757"], ["encrypted_password", "$2a$04$vypl7.GqbFzriL8kCpxfaOmXiqeSLRyDmVsVuuLfG3LRvRa2tp05e"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:28.401314"], ["token_expires_at", "2019-04-03 17:54:28.400710"], ["id", 553]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 553], ["title", "Hey"], ["body", "This is a post"], ["created_at", "2019-04-02 17:54:28.404787"], ["updated_at", "2019-04-02 17:54:28.404787"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 553], ["title", "AAA"], ["body", "Aaaa aaa aa a"], ["created_at", "2019-04-02 17:54:28.407680"], ["updated_at", "2019-04-02 17:54:28.407680"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 553], ["title", "BBB"], ["body", "Bbbb bbb bb b"], ["created_at", "2019-04-02 17:54:28.410443"], ["updated_at", "2019-04-02 17:54:28.410443"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 553], ["title", "CCC"], ["body", "Cccc ccc cc c"], ["created_at", "2019-04-02 17:54:28.414015"], ["updated_at", "2019-04-02 17:54:28.414015"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"search"=>{"query"=>{"body"=>"Aaa"}}, "user_id"=>"553"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 553], ["LIMIT", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? AND (body LIKE '%Aaa%')[0m  [["user_id", 553]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dakotaboyer@gerhold.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "dakotaboyer@gerhold.com"], ["created_at", "2019-04-02 17:54:28.427484"], ["updated_at", "2019-04-02 17:54:28.427484"], ["encrypted_password", "$2a$04$nB3FjgNLzKtGywXrjqUKwOXb/IoHolwu7hN.lXIIoIGj2A2GYLPHS"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token_expires_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-04-02 17:54:28.430888"], ["token_expires_at", "2019-04-03 17:54:28.430055"], ["id", 554]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 554], ["title", "Hey"], ["body", "This is a post"], ["created_at", "2019-04-02 17:54:28.435357"], ["updated_at", "2019-04-02 17:54:28.435357"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 554], ["title", "AAA"], ["body", "Aaaa aaa aa a"], ["created_at", "2019-04-02 17:54:28.437761"], ["updated_at", "2019-04-02 17:54:28.437761"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 554], ["title", "BBB"], ["body", "Bbbb bbb bb b"], ["created_at", "2019-04-02 17:54:28.439754"], ["updated_at", "2019-04-02 17:54:28.439754"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 554], ["title", "CCC"], ["body", "Cccc ccc cc c"], ["created_at", "2019-04-02 17:54:28.442297"], ["updated_at", "2019-04-02 17:54:28.442297"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Processing by Api::PostsController#index as JSON
+  Parameters: {"search"=>{"_operator"=>"or", "query"=>{"body"=>"Aaa", "title"=>"BBB"}}, "user_id"=>"554"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 554], ["LIMIT", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ? AND (title LIKE '%BBB%' OR body LIKE '%Aaa%')[0m  [["user_id", 554]]
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "noahflatley@mcclure.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "noahflatley@mcclure.net"], ["created_at", "2019-04-02 17:54:28.589390"], ["updated_at", "2019-04-02 17:54:28.589390"], ["encrypted_password", "$2a$04$foC7ftS0jmAIAiXALJ4vSO24CI.3GL/a0QZN1riHm8hbl0oMH0RXO"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/posts?user_id=555" for 127.0.0.1 at 2019-04-02 12:54:28 -0500
+Processing by Api::PostsController#index as JSON
+  Parameters: {"user_id"=>"555"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 555], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 555]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pat@von.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "pat@von.info"], ["created_at", "2019-04-02 17:54:28.606504"], ["updated_at", "2019-04-02 17:54:28.606504"], ["encrypted_password", "$2a$04$AeOxb0iivDYVLR60zkaLwezWRYR2kgBD2NRc.rMZuL7CE5bvQ6qTi"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/posts?user_id=556&HTTP_ACCEPT=application%2Fjson%3B+version%3D1" for 127.0.0.1 at 2019-04-02 12:54:28 -0500
+Processing by Api::PostsController#index as JSON
+  Parameters: {"user_id"=>"556", "HTTP_ACCEPT"=>"application/json; version=1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 556], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 556]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "edwardo@borer.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "edwardo@borer.io"], ["created_at", "2019-04-02 17:54:28.615434"], ["updated_at", "2019-04-02 17:54:28.615434"], ["encrypted_password", "$2a$04$b6It2PP3Eu6apahsWUDqSuUMdDfu/kSY.PaZszsMPRUUZDJBXTAX."]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/posts?user_id=557" for 127.0.0.1 at 2019-04-02 12:54:28 -0500
+Processing by Api::PostsController#index as JSON
+  Parameters: {"user_id"=>"557"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 557], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 557]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kenyattastehr@mcglynn.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "created_at", "updated_at", "encrypted_password") VALUES (?, ?, ?, ?, ?)[0m  [["username", "lserman"], ["email", "kenyattastehr@mcglynn.net"], ["created_at", "2019-04-02 17:54:28.625507"], ["updated_at", "2019-04-02 17:54:28.625507"], ["encrypted_password", "$2a$04$EfjQLozUsmdviXNYaptVkuYb.oxcBmlNnzwKsEkqcr.r7OLaw90YG"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/posts?user_id=558&HTTP_ACCEPT=application%2Fjson%3B+version%3D1" for 127.0.0.1 at 2019-04-02 12:54:28 -0500
+Processing by Api::PostsController#index as JSON
+  Parameters: {"user_id"=>"558", "HTTP_ACCEPT"=>"application/json; version=1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 558], ["LIMIT", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 558]]
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms)

@@ -6,8 +6,8 @@ require 'rails/all'
 #require "active_storage/engine"
 
 Bundler.require(*Rails.groups)
-require "cas_seas3_rails_responders2"
 
+require "cas_seas3_rails_responders2"
 require 'byebug'
 
 module Dummy
