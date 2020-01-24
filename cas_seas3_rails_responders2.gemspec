@@ -25,8 +25,14 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
+  spec.add_dependency 'rack', '2.0.8'
   spec.add_dependency 'rails', ['>= 5', '< 6']
   spec.add_dependency 'responders', '~> 2.4.0'
+  spec.add_dependency 'devise'
+  spec.add_dependency 'nokogiri', '~> 1.10.4'
+  spec.add_dependency 'omniauth'
+  spec.add_dependency 'omniauth-twitter'
+
   spec.add_development_dependency 'webmock'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rspec-rails'
@@ -37,9 +43,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'fabrication'
   spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'kaminari'
-
-  spec.add_dependency 'devise'
-  spec.add_dependency 'nokogiri', '~> 1.10.4'
-  spec.add_dependency 'omniauth'
-  spec.add_dependency 'omniauth-twitter'
 end
