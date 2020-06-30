@@ -1,12 +1,12 @@
 PATH
   remote: .
   specs:
-    cas_seas3_rails_responders2 (0.1.4)
+    cas_seas3_rails_responders2 (0.1.5)
       devise
       nokogiri (~> 1.10.4)
       omniauth (~> 1.9.1)
       omniauth-twitter
-      rack (= 2.0.8)
+      rack (~> 2.2.3)
       rails (>= 5, < 6)
       responders (~> 2.4.0)
 
@@ -128,7 +128,7 @@ GEM
       rack
     orm_adapter (0.5.0)
     public_suffix (3.0.3)
-    rack (2.0.8)
+    rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.4.3)
