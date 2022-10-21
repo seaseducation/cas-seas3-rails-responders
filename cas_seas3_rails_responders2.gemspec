@@ -30,7 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'responders', '~> 2.4.0'
   spec.add_dependency 'devise'
   spec.add_dependency 'mimemagic', '~> 0.3.10'
-  spec.add_dependency 'nokogiri', '>= 1.11', '< 1.13'
+  spec.add_dependency 'nokogiri', '>= 1.11', '< 1.14'
   spec.add_dependency 'oauth', '0.5.5'
   spec.add_dependency 'omniauth', '~> 1.9.1'
   spec.add_dependency 'omniauth-twitter'
