@@ -26,8 +26,8 @@ Gem::Specification.new do |spec|
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   spec.add_dependency 'rack', '~> 2.2.3'
-  spec.add_dependency 'rails', ['>= 5', '< 6']
-  spec.add_dependency 'responders', '~> 2.4.0'
+  spec.add_dependency 'rails', '~> 6.1'
+  spec.add_dependency 'responders'
   spec.add_dependency 'devise'
   spec.add_dependency 'mimemagic', '~> 0.4.3'
   spec.add_dependency 'nokogiri', '>= 1.11', '< 1.13'
